@@ -16,7 +16,7 @@ import java.awt.event.MouseEvent;
  */
 public class MouseAdapterRetangulo extends MouseAdapterFigura {
    
-    public MouseAdapterRetangulo(TelaDesenho telaDesenho,Palco palco) {
+    public MouseAdapterRetangulo(TelaDesenho telaDesenho,Palco palco){
         super(telaDesenho,palco);
     }
     

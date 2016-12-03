@@ -29,7 +29,7 @@ public class MouseAdapterElipse extends MouseAdapterFigura {
             //AQUI É ONDE VOCÊS DEVEM FAZER A LÓGICA SER CHAMADA,
             //ANTES DE DESENHAR NA TELA
             palco.inserirAtor(new Elipse(x, y, e.getX() - x, e.getY() - y));
-            //tela.desenhaElipse(x, y, e.getX() - x, e.getY() - y);
+            tela.desenhaElipse(x, y, e.getX() - x, e.getY() - y);
         }}
     
 }

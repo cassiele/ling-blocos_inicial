@@ -18,15 +18,11 @@ public interface Desenhador {
     
     public void desenhaLinhaReta();
     
-    public void desenhaPoligono();
+    public void desenhaPoligono(int x,int y,int lados,int tamLados);
     
-    public void desenhaRetangulo();
+    public void desenhaRetangulo(int x, int y, int largura, int altura);
     
-    public void desenhaTriangulo();
-    
-    
-    
-    
+    public void desenhaTriangulo(int x,int y,int base,int altura);    
     
     
     

@@ -7,6 +7,7 @@ package br.ufpr.lingblocos.apresentacao.desktop.mouseadapters;
 
 import br.ufpr.lingblocos.apresentacao.desktop.teladesenho.TelaDesenho;
 import br.ufpr.lingblocos.logicapalco.Palco;
+import br.ufpr.lingblocos.logicapalco.Triangulo;
 import java.awt.event.MouseEvent;
 
 /**
@@ -25,6 +26,7 @@ public class MouseAdapterTriangulo extends MouseAdapterFigura {
             pressed = false;
             //AQUI É ONDE VOCÊS DEVEM FAZER A LÓGICA SER CHAMADA,
             //ANTES DE DESENHAR NA TELA
+            palco.inserirAtor(new Triangulo(x, y, e.getX() - x, e.getY() - y));
             tela.desenhaTriangulo(x, y, e.getX() - x, e.getY() - y);
         }
     }

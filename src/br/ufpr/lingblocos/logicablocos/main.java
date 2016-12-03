@@ -69,6 +69,7 @@ public class main {
        relacaoOpcaoFiguraMouse.put(OpcaoFigura.RETANGULO, new MouseAdapterRetangulo(telaDesenho, palco));
        relacaoOpcaoFiguraMouse.put(OpcaoFigura.ELIPSE, new MouseAdapterElipse(telaDesenho, palco));
        relacaoOpcaoFiguraMouse.put(OpcaoFigura.TRIANGULO, new MouseAdapterTriangulo(telaDesenho, palco));
+       //relacaoOpcaoFiguraMouse.put(OpcaoFigura.RETA, new MouseAdapterLinha(telaDesenho, palco));
        janela.setupMouseAdaptersFigura(relacaoOpcaoFiguraMouse);
        
        //Adicionando relação de opções de blocos com mouse listeners:

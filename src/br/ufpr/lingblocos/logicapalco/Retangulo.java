@@ -24,7 +24,7 @@ public class Retangulo extends Ator {
 
     @Override
     public void desenhar() {
-        desenhador.desenhaRetangulo();
+        desenhador.desenhaRetangulo(x, y,largura , altura);
     }
 
     @Override

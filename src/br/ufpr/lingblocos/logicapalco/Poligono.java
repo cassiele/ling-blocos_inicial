@@ -16,13 +16,15 @@ public class Poligono extends Ator{
     private int lados;
     private int tamLados;
 
-    public Poligono(int x, int y) {
+    public Poligono(int x, int y, int lados, int tamlados) {
         super(x, y);
+        this.lados  = lados;
+        this.tamLados = tamlados;
     }
 
     @Override
     public void desenhar() {
-        desenhador.desenhaPoligono();
+        desenhador.desenhaPoligono(x , y, lados, tamLados);
     }
 
     @Override

@@ -8,6 +8,7 @@ package br.ufpr.lingblocos.apresentacao.desktop.teladesenho;
 import br.ufpr.lingblocos.apresentacao.desktop.principal.JanelaPrincipal;
 import br.ufpr.lingblocos.apresentacao.desktop.mouseadapters.MouseAdapterFigura;
 import java.awt.Color;
+import java.awt.Point;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.SystemColor;
@@ -15,6 +16,9 @@ import java.awt.event.MouseAdapter;
 import java.awt.image.BufferedImage;
 import javax.swing.JPanel;
 import br.ufpr.lingblocos.util.Observer;
+import java.awt.Polygon;
+
+
 
 /**
  *
@@ -66,11 +70,11 @@ public class TelaDesenho implements Observer<MouseAdapterFigura>{
         tela.addMouseListener(this.mouseAdapter);
     }
     
-     /**
+     /** }
      * Método chamado pela entidade observada (JanelaPrincipal).
      * Quando há mudança de opção, necessariamente deve haver mudança
      * de mouse adapter.
-     * @param o
+     * @param o }
      * @param m
      */
     @Override
@@ -107,10 +111,26 @@ public class TelaDesenho implements Observer<MouseAdapterFigura>{
         return tela.getWidth();
     }
 
-    public void desenhaTriangulo(int x, int y, int i, int i0) {
+    public void desenhaTriangulo(int x, int y, int x1, int y1) {
+        
+        double distancia;
+        
+        distancia = Math.sqrt( Math.pow( (x - x1),2 ) + Math.pow( (y - y1),2 ));
+        
+        Polygon poligono = new Polygon();
+        
+//        poligono.addPoint(x, y);
+//        poligono.addPoint(x1, y1);
+//        poligono.addPoint(y, y1);
+        poligono.addPoint(100, 100);
+        poligono.addPoint(150, 50);
+        poligono.addPoint(200, 100);
+
         Graphics2D g = imagemAtual.createGraphics();
         g.setColor(Color.BLACK);
-        g.drawString("TRIANGULO", x, y);
+        g.drawPolygon(poligono);
+  
+        //g.drawString("TRIANGULO", x, y);
         tela.repaint();
 
     }
